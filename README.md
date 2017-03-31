@@ -4,7 +4,7 @@
 
 Simple Python3 based interactive assembly/disassembly shell for various architectures powered by [Keystone](http://www.keystone-engine.org/)/[Capstone](http://www.capstone-engine.org/).
 
-I simply got tired of using [metasm_shell](https://github.com/rapid7/metasploit-framework/blob/master/tools/exploit/metasm_shell.rb) and [nasm_shell](https://github.com/rapid7/metasploit-framework/blob/master/tools/exploit/nasm_shell.rb) to assemble and disassemble code. Keystone and Capstone are awesome and... I like Python.
+I simply got tired of using [metasm_shell](https://github.com/rapid7/metasploit-framework/blob/master/tools/exploit/metasm_shell.rb) and [nasm_shell](https://github.com/rapid7/metasploit-framework/blob/master/tools/exploit/nasm_shell.rb) to assemble and disassemble code. [Keystone](https://github.com/keystone-engine/keystone) and [Capstone](https://github.com/aquynh/capstone) are awesome and... I like Python.
 
 ## Dependencies
 
