@@ -51,7 +51,6 @@ class Disassembler(Kcshell):
         except CsError as e:
             print("Error: %s" %e)
 
-
     def default(self, user_input):
         ''' if no other command was invoked '''
         try:
