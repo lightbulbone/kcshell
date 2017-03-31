@@ -25,6 +25,8 @@ Documented commands (type help <topic>):
 ========================================
 EOF  exit  help  lsarchs  lsmodes  quit  setarch  setmode
 
+asm> help setarch
+Set Assembler architecture. To list available options type 'lsarchs'.
 asm> lsarchs
 x16, systemz, sparc64, mips64, hexagon, ppc32, x64, arm_t, arm64, ppc64, sparc, arm, x86, mips32
 asm> setarch x64
