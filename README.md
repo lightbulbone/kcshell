@@ -15,7 +15,7 @@ I simply got tired of using [metasm_shell](https://github.com/rapid7/metasploit-
 
 ```C
 $ python3 main.py 
--=[ kcshell v0.0.1b ]=-
+-=[ kcshell v0.0.1 ]=-
 Default Assembler architecture is x86 (32 bits)
 asm> jmp esp
 "\xff\xe4"
