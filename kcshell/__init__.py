@@ -6,7 +6,7 @@ import sys
 if sys.version_info.major < 3: print("[-] You need Python 3."); sys.exit(255)
 
 APP_NAME = "kcshell"
-APP_VERSION = "0.0.2"
+APP_VERSION = "0.0.3"
 
 from kcshell import config
 
