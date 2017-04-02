@@ -109,3 +109,6 @@ disasm>
 * Read input from files
 * Set a proper base address for 64 bits architectures
 
+#### Python Package Index
+
+* https://pypi.python.org/pypi/kcshell
