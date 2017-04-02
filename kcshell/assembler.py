@@ -1,5 +1,5 @@
 import os
-from kcshell import Kcshell
+from kcshell.kcshell import Kcshell
 from keystone import *
 from struct import pack
 from binascii import hexlify

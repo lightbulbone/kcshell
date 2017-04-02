@@ -1,5 +1,5 @@
-from assembler import Assembler
-from disassembler import Disassembler
+from kcshell.assembler import Assembler
+from kcshell.disassembler import Disassembler
 
 def get_op_modes():
     OP_MODES = {

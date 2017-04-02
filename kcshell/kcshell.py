@@ -1,6 +1,6 @@
 import sys
 from cmd import Cmd
-import config
+from kcshell import config
 
 class Kcshell(Cmd):
     ''' Common Assembler and Disassembler commands '''
