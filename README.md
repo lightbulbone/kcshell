@@ -15,7 +15,6 @@ pip3 install kcshell
 OR (assuming you have Keystone and Capstone build toolchains installed)
 
 ```C
-mkvirtualenv kcshell # this is actually optional
 git clone https://github.com/fdiskyou/kcshell
 cd kcshell
 python setup.py install
