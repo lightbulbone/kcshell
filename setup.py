@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'kcshell',
-    version = '0.0.1b',
+    version = '0.0.4',
     packages = ['kcshell'],
     author = 'Rui Reis',
     author_email = 'rui@deniable.org',
