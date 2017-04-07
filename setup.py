@@ -8,7 +8,7 @@ setup(
     author_email = 'rui@deniable.org',
     url = 'https://github.com/fdiskyou/kcshell',
     description = 'Simple Python3 based interactive assembly/disassembly shell for various architectures powered by Keystone/Capstone.',
-    license = 'MIT',
+    license = 'BSD',
     install_requires=[
         'keystone-engine',
         'capstone'
@@ -19,7 +19,7 @@ setup(
         'Topic :: Software Development :: Assemblers',
         'Topic :: Software Development :: Disassemblers',
         'Environment :: Console',
-        'License :: OSI Approved :: MIT License',
+        'License :: OSI Approved :: BSD',
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
