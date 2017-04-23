@@ -26,7 +26,7 @@ By default 'kcshell' starts in 'assembler' mode (x86 32 bits). You can change mo
 
 ```C
 $ kcshell
--=[ kcshell v0.0.3 ]=-
+-=[ kcshell 0.0.4 ]=-
 Default Assembler architecture is x86 (32 bits)
 asm> lsmodes
 disasm, asm
