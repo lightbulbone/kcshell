@@ -50,6 +50,8 @@ asm> jmp -500
 "\xe9\x07\xfe\xff\xff"
 asm> add esp,-1500
 "\x81\xc4\x24\xfa\xff\xff"
+asm> xor ecx,ecx ; mov ch, 0xc8 ; mov esi, edi ; mov edi, esp ; rep movsb
+"\x31\xc9\xb5\xc8\x89\xfe\x89\xe7\xf3\xa4"
 asm> setarch x64
 Assembler architecture is now x64
 asm> inc rax
