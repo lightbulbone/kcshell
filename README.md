@@ -67,6 +67,12 @@ disasm> \xff\xe4
 0x00400000:     jmp     esp
 disasm> \x31\xc0
 0x00400000:     xor     eax, eax
+disasm> \x31\xc9\xb5\xc8\x89\xfe\x89\xe7\xf3\xa4
+0x00400000:	xor	ecx, ecx
+0x00400002:	mov	ch, 0xc8
+0x00400004:	mov	esi, edi
+0x00400006:	mov	edi, esp
+0x00400008:	rep movsb	byte ptr es:[edi], byte ptr [esi]
 disasm> setarch x64
 Disassembler architecture is now x64
 disasm> \x48\xff\xc0
