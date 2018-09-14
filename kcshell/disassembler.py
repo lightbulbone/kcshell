@@ -15,14 +15,27 @@ class Disassembler(Kcshell):
     def get_cs_archs(self):
         ''' capstone disassembler '''
         cs_archs = {
-            'x16':     (CS_ARCH_X86,     CS_MODE_16),
-            'x86':     (CS_ARCH_X86,     CS_MODE_32),
-            'x64':     (CS_ARCH_X86,     CS_MODE_64),
-            'arm':     (CS_ARCH_ARM,     CS_MODE_ARM),
-            'arm_t':   (CS_ARCH_ARM,     CS_MODE_THUMB),
-            'arm64':   (CS_ARCH_ARM64,   CS_MODE_LITTLE_ENDIAN),
-            'mips32':  (CS_ARCH_MIPS,    CS_MODE_MIPS32),
-            'mips64':  (CS_ARCH_MIPS,    CS_MODE_MIPS64),
+            'x16':     {'arch': CS_ARCH_X86,
+                        'mode': CS_MODE_16,
+                        'desc': "x86 (16-bit)"},
+            'x86':     {'arch': CS_ARCH_X86,
+                        'mode': CS_MODE_32,
+                        'desc': "x86 (32-bit)"},
+            'x64':     {'arch': CS_ARCH_X86,
+                        'mode': CS_MODE_64,
+                        'desc': "x86 (64-bit)"},
+            'arm':     {'arch': CS_ARCH_ARM,
+                        'mode': CS_MODE_ARM,
+                        'desc': "ARM (32-bit)"},
+            'arm_t':   {'arch': CS_ARCH_ARM,
+                        'mode': CS_MODE_THUMB,
+                        'desc': "ARM (Thumb/Thumb-2)"},
+            'arm_m':   {'arch': CS_ARCH_ARM,
+                        'mode': CS_MODE_MCLASS+CS_MODE_THUMB,
+                        'desc': "ARMv7-M (Cortex-M4)"},
+            'arm64':   {'arch': CS_ARCH_ARM64,
+                        'mode': CS_MODE_LITTLE_ENDIAN,
+                        'desc': "ARMv8 (AArch64)"},
             }
         return cs_archs
 
@@ -35,17 +48,19 @@ class Disassembler(Kcshell):
         print("List supported Disassembler architectures.")
 
     def do_lsarchs(self, dummy):
-        print(", ".join(self.get_cs_archs().keys()))
+        archs_dict = self.get_cs_archs()
+        for k, v in archs_dict.items():
+            print("{}: {}".format(k, v['desc']))
 
     def help_setarch(self):
         print("Set Disassembler architecture. To list available options type 'lsarchs'.")
 
     def do_setarch(self, arch):
         try:
-            if arch:            
-                cs_arch, cs_mode = self.get_cs_archs()[arch]
-                self._cs = Cs(cs_arch, cs_mode)
-                print('Disassembler architecture is now ' + arch)
+            if arch:
+                cs_dict = self.get_cs_archs()[arch]
+                self._cs = Cs(cs_dict['arch'], cs_dict['mode'])
+                print('Disassembler architecture is now {}'.format(cs_dict['arch']))
             else:
                 print("Usage: setarch <arch>\nType 'lsarchs' to list all supported architectures.")
         except CsError as e:
